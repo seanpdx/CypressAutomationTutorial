@@ -7,8 +7,16 @@ static searchGoogle(searchTerm: string) {
         cy.root().submit();
     });
 
+}
+
+static assertSeachTermInResults(searchTerm: string) {
+
+    cy.get('div[class="g"]')
+    .contains(searchTerm)
+    .should('be.visible');
 
 }
+
 
 }
 export default GoogleActions;

@@ -14,6 +14,7 @@ When("I search {string}", (searchTerm) => {
 
 
 Then("I should see {string} in the search results", (searchTerm) => {
+  GoogleActions.assertSeachTermInResults(searchTerm);
 
 });
 
